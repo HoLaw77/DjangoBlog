@@ -16,7 +16,8 @@ import os
 import dj_database_url
 
 
-if os.path.isfile('env.py'):    import env
+if os.path.isfile('env.py'):
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -136,6 +137,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
